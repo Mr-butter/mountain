@@ -1,11 +1,13 @@
 :root {
-    --main-bg-color: cornsilk;
+    --main-bg-color: #A9C9FF;
+    /* --main-bg-img: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
     --nav-hover-color: #fff;
-    --nav-list-font: SpoqaHanSansNeo-Regular;
+    --nav-font-family: SpoqaHanSansNeo-Regular;
 }
 
 body {
     background-color: var(--main-bg-color);
+    /* background-image: var(--main-bg-img) cover; */
 }
 
 /* login */
@@ -37,7 +39,7 @@ body {
 .nav-item {
     flex: 0 1 auto;
     list-style: none;
-    font-family: var(--nav-list-font), sans-serif;
+    font-family: var(--nav-font-family), sans-serif;
     font-size: 2vw;
     text-align: center;
     padding: 0.7em 0;
