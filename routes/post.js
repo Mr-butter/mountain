@@ -7,8 +7,6 @@ const { Post, Hashtag } = require('../models');
 
 const router = express.Router();
 
-console.log(1);
-
 /* uploads 폴더 */
 try {
     fs.readdirSync('uploads');
@@ -58,11 +56,11 @@ router.post('/', upload.none(), async (req, res, next) => {
       console.log(result);
       await post.addHashtags(result.map(r => r[0]));
     }
-    res.redirect('/');
+    res.redirect('/post');
   } catch (error) {
     console.error(error);
     next(error);
-  }
+  };
 });
 
 module.exports = router;

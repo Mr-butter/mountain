@@ -40,7 +40,7 @@ app.use("/", indexRouter);
 app.use("/post", postRouter);
 
 app.get("/post", (req, res, next) => {
-  res.render('write-community', { title: "" });
+  res.render('write-community', { title: "업로드" });
 });
 
 app.get("/club-upload", (req, res) => {
