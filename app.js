@@ -9,6 +9,7 @@ const { sequelize } = require("./models");
 ////라우터 추가할때마다 여기도 추가//////////////////////////////////////////////////////////
 const indexRouter = require("./routes");
 const clubRouter = require("./routes/club");
+const postRouter = require("./routes/post");
 
 ////////////////////////////////////////////////////////////////
 const app = express();
@@ -36,6 +37,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/img", express.static(path.join(__dirname, "uploads")));
 ////라우터 추가할때마다 여기도 추가//////////////////////////////////////////////////////////
 app.use("/", indexRouter);
+app.use("/post", postRouter);
+
+app.get("/post", (req, res, next) => {
+  res.render('write-community', { title: "" });
+});
 
 app.get("/club-upload", (req, res) => {
   res.render("club-upload", { title: "도전클럽" });
