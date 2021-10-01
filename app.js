@@ -10,6 +10,7 @@ const { sequelize } = require("./models");
 const indexRouter = require("./routes");
 const clubRouter = require("./routes/club");
 const postRouter = require("./routes/post");
+const communityRouter = require("./routes/community");
 
 ////////////////////////////////////////////////////////////////
 const app = express();
@@ -38,6 +39,7 @@ app.use("/img", express.static(path.join(__dirname, "uploads")));
 ////라우터 추가할때마다 여기도 추가//////////////////////////////////////////////////////////
 app.use("/", indexRouter);
 app.use("/post", postRouter);
+app.use("/community", communityRouter);
 
 app.get("/post", (req, res, next) => {
   res.render('write-community', { title: "업로드" });
