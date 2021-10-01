@@ -1,6 +1,7 @@
 ////모듈 추가할때마다 여기도 추가//////////////////////////////////////////////////////////
 const createError = require("http-errors");
 const express = require("express");
+const session = require("express-session");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
@@ -42,6 +43,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/img", express.static(path.join(__dirname, "uploads")));
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.COOKIE_SECRET,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+    },
+  })
+);
 ////라우터 추가할때마다 여기도 추가//////////////////////////////////////////////////////////
 app.use("/", mainRouter);
 app.use("/club", clubRouter);
