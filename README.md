@@ -4,6 +4,8 @@
 
 ## 팀원 : 김혜린, 박준혁, 이소윤 (이하 가나다순)
 
+https://cool-walkover-08a.notion.site/2-mountain-e4f7b216ba1b4abebe84fe6d1ae6d6ce
+
 ## < 상위 폴더 정리 >
 
 ### bin : http 모듈에 express 모듈을 연결하며, 포트를 지정할 수 있다. 서버를 실행하는 스크립트이다.
