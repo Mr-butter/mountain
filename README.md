@@ -4,6 +4,8 @@
 
 ## 팀원 : 김혜린, 박준혁, 이소윤 (이하 가나다순)
 
+## 테스트 (## < 하부 폴더 정리 >)
+
 https://cool-walkover-08a.notion.site/2-mountain-e4f7b216ba1b4abebe84fe6d1ae6d6ce
 
 ## < 상위 폴더 정리 >
