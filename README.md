@@ -1,130 +1,49 @@
-##### 너도나도노드
+# 너도나도노드 팀
 
-## 팀장 : 박성근
+### 팀장 : 박성근 <a href="https://github.com/Mr-butter"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a>
+### 팀원 : 김혜린 <a href="https://github.com/Hyerin1208"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> <a href="https://plastic-yuzu-23a.notion.site/2-Node-js-c277503155184d9d9c094dd8754b4756"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a> , 박준혁 <a href="https://github.com/berrypjh"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> <a href="https://quark-tangelo-d51.notion.site/2-Node-js-31dde1cd888145ec81ac99c307214dc9"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a> , 이소윤 <a href="https://github.com/jsoyun"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> <a href="https://cool-walkover-08a.notion.site/2-mountain-e4f7b216ba1b4abebe84fe6d1ae6d6ce"><img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a>
+---------------------------------------
 
-## 팀원 : 김혜린, 박준혁, 이소윤 (이하 가나다순)
+### 프로젝트 기간 : 2021-09-29 ~ 2021-10-15 (총 17일)
 
-https://cool-walkover-08a.notion.site/2-mountain-e4f7b216ba1b4abebe84fe6d1ae6d6ce
+### 개요
+어른들의 여가 생활로만 생각햇던 등산이 젊은 세대들의 관심이 높아짐에 따라 어른들의 이미지를
+탈피한 사이트를 제작하고자 함.
 
-## < 상위 폴더 정리 >
+### 목적
+등산을 주제로 한 인증 SNS 플랫폼
+1. 보다 쉽게 산을 접하고 등산할 수 있도록 국내명산에 대한 정보 및 교통정보 제공
+2. 사용자들이 직접 참여할 수 있는 커뮤니티를 구성해 등산과 관련된 정보 제공
+3. 산을 활용한 인적네트워크 구축
 
-### bin : http 모듈에 express 모듈을 연결하며, 포트를 지정할 수 있다. 서버를 실행하는 스크립트이다.
+### 기획서  <a href="https://docs.google.com/presentation/d/17nZBAXbWB7R4zyDEvABGtIzG2kZyEdFs/edit?usp=sharing&ouid=108810371152735520339&rtpof=true&sd=true"><img src="https://img.shields.io/badge/Google Drive-4285F4?style=flat-square&logo=Google Drive&logoColor=white"/></a>
 
-### config : 연결시킬 데이터 베이스의 정보를 입력하는 곳이다.
+### 프로젝트 내 사용 기술
 
-### models : 시퀄라이즈로 정의한 데이터베이스 형식이 들어가있다.
+|      페이지      | 사용 기술 |
+--------|------------
+사용자 관리  | 카카오/네이버/구글 로그인 , 회원정보수정 , 회원탈퇴 , 로그인/작성자 본인 여부 등에 따라 접근 권한 설정 , bcrypt 비밀번호 암호화 , express-session 으로 로그인 세션 관리 , 회원가입/로그인 중복 방지 , 유효성 검사
+도전클럽 업로드 | CRUD , 해시태그 검색 기능 , 팔로우/언팔로우 기능 , 페이지 내 댓글 기능
+100대 명산 정보 | 산림청 API
+자유 게시판 | CRUD , 제목/내용/작성자 검색 기능 , 페이징 기능 , 조회수 , 페이지 내 댓글 기능
+기타 | 날씨 API
 
-### node_modules : 설치한 모듈이 저장된 공간이다.
+---------------------------------------
 
-### passport : 로그인 관련 라우터들을 모아둔 곳이다.
+# in the mountain 사이트 미리보기
+##### * 사진을 클릭하면 크게 볼 수 있어요!!
 
-### public : 외부(브라우저 등의 클라이언트)에서 접근 가능한 파일들을 모아 둔 디렉토리이다. images, javascripts, stylesheets 파일들이 들어있다.
+|      | 페이지 |      | 페이지 |
+----|----------------|----|----------------
+메인 페이지  | ![KakaoTalk_20211125_085357264_01](https://user-images.githubusercontent.com/89543695/143537017-1cd0c3fd-128a-4874-988b-b1b67c6f6781.gif) | 로그인/회원가입 페이지  | ![KakaoTalk_20211125_090237103](https://user-images.githubusercontent.com/89543695/143537035-58d89a12-3933-473c-9f6e-c72aa88a4909.gif)
+마이페이지  | ![KakaoTalk_20211125_085357264_04](https://user-images.githubusercontent.com/89543695/143537709-36c7ad01-4bcf-404f-ad15-3482253a2061.gif) | 도전클럽 업로드  | ![KakaoTalk_20211125_085357264_06](https://user-images.githubusercontent.com/89543695/143537068-94dc0bbb-6ee6-4f6b-b67b-9515b436a44b.gif)
+도전클럽 페이지 (비로그인) | ![KakaoTalk_20211125_085357264_11](https://user-images.githubusercontent.com/89543695/143537198-47a7aea8-1644-4c12-8d20-e5c17827ce90.gif) | 도전클럽 페이지 (로그인) | ![KakaoTalk_20211125_085357264_07](https://user-images.githubusercontent.com/89543695/143537081-9437a63e-729d-47f1-ba2c-13e862c81025.gif) | 댓글  | ![KakaoTalk_20211125_085357264_08](https://user-images.githubusercontent.com/89543695/143537094-d46206f6-5fa4-4a55-bf0c-6d57b7c27bf4.gif)
+팔로잉/팔로워  | ![KakaoTalk_20211125_085357264_09](https://user-images.githubusercontent.com/89543695/143537103-445acca8-48d9-40e1-8b95-38dd58b03bb6.gif) | 해시태그 검색   | ![KakaoTalk_20211125_085357264_10](https://user-images.githubusercontent.com/89543695/143537189-fdf2cdc6-b9b5-4f18-ae97-d3bf78f90fc1.gif)
+자유게시판 업로드 | ![freeup](https://user-images.githubusercontent.com/89543695/143828461-cd8ea217-591f-49f4-9c6a-8a68ebddfacc.gif) | 자유게시판 수정 & 삭제 | ![freedelect](https://user-images.githubusercontent.com/89543695/143828481-01c2e0b4-cd43-4d68-ae95-10b99893e825.gif)
+검색 (제목/내용, 제목, 내용, 작성자)  | ![ezgif com-gif-maker](https://user-images.githubusercontent.com/89543695/143828527-415657b3-a1c8-4507-8d4d-717368aa6323.gif) | 페이징 | ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/89543695/143828535-eeab9e8b-e405-4c71-907f-c11297cecfe3.gif)
 
-### routes : 라우터들을 관리하는 곳, 서버의 로직은 모두 routes 폴더 안의 파일에 작성할 것이다.
+---------------------------------------
 
-### uploads : 사용자가 파일을 올렸을 때 저장되는 곳이다.
-
-### views : view 파일들을 관리하는 곳으로 웹서버로 사용 시 이 디렉토리에 잇는 파일들을 사용해서 렌더링 시킨다.
-
-## < 하부 폴더 정리 >
-
-### board : 게시판
-
-### club : 도전클럽
-
-### login : 로그인 정보
-
-### main : 메인 화면
-
-### mountainInfo : 100대 명산 정보
-
-## < 사용 기술 >
-
-### MySQL DB
-
-### bcrypt 비밀번호 암호화
-
-### CRUD 와 파일 업로드 가능 게시판
-
-### 로그인, 작성자 본인 여부 등에 따라 접근 권한 설정
-
-### 페이징 기능
-
-### 페이지 내 댓글 기능
-
-### express-session 으로 로그인 세션 관리
-
-### 산림청 API
-
-### 날씨 API
-
-### 카카오, 네이버, 구글 로그인
-
-### 회원가입/로그인 중복 방지, 유효성 검사
-
-## 발생한 이슈 & 해결 방법 ##
-
-## "정보전달과 넌적스 사용의 어려움" ## 이소윤
-
-> **회원가입시 넣은 정보 마이페이지로 전달하기**
-> 
-- 상황
-
-회원가입시 입력한 정보를 마이페이지에 넣으려고 하였다. 
-
-- 문제
-
-회원가입시 프로필 이미지를 넣고자 사진을 삽입했는데 데이터베이스에 경로만 뜨고 프로필에는 이미지가 뜨지 않았다. 
-
-- 해결
-
-router.get을 통해 프로필 사진을 읽었다. User에 들어간 회원정보를 findOne으로 찾았다. 요청한 회원 아이디 중에서 사진을 가져오도록 했다.
-
-> **팔로우 끊기 넌적스 if로 버튼교체하기**
-> 
-- 상황
-
-팔로우를 한 상대는 언팔버튼이 뜨고 팔로우를 하지 않은 상대는 팔로우 버튼, 나 자신은 아무 버튼도 안 뜨도록 하였다.
-
-- 문제
-
-넌적스를 처음 사용했기 때문에 쉽지 않았다. 넌적스 if문을 사용해 팔로우, 언팔로우 버튼 교체를 시도하였지만 나자신 정보가 한데 묶여 해결되지 않았다.
-
-- 해결
-
-"만약에 트윗유저가 followerIdlist에 포함되어있지 않고 나자신이 아니면, 팔로우하기/ 그게 아니면(트윗유저가 followerIdlist에 포함되어있으면 그리고 나자신 아니면) 팔로우끊기"로 나눠 해결했다. elif 부분이 힘들었다.
-
-> **사용할 정보들 라우터안에 넣고 {{넌적스}}를 이용해 정보전달**
-> 
-- 상황
-
-팔로잉, 팔로워에 해당하는 유저의 아이디와 본인의 닉네임 등을 불러왔다.
-
-- 문제
-
-필요한 데이터들을 가져와 비교하는 과정이 어려웠다. 
-
-- 해결
-
-응답받은 팔로워 리스트를 요청한 팔로잉의 맵 함수를 통해 만들었다. 넌적스를 사용해 해당하는 값을 불러왔다.
-
-### 제목/내용/작성자 검색 기능!
-
-![KakaoTalk_20211125_085357264_01](https://user-images.githubusercontent.com/89543695/143537017-1cd0c3fd-128a-4874-988b-b1b67c6f6781.gif)
-
-![KakaoTalk_20211125_090237103](https://user-images.githubusercontent.com/89543695/143537035-58d89a12-3933-473c-9f6e-c72aa88a4909.gif)
-
-![KakaoTalk_20211125_085357264_04](https://user-images.githubusercontent.com/89543695/143537709-36c7ad01-4bcf-404f-ad15-3482253a2061.gif)
-
-![KakaoTalk_20211125_085357264_06](https://user-images.githubusercontent.com/89543695/143537068-94dc0bbb-6ee6-4f6b-b67b-9515b436a44b.gif)
-
-![KakaoTalk_20211125_085357264_07](https://user-images.githubusercontent.com/89543695/143537081-9437a63e-729d-47f1-ba2c-13e862c81025.gif)
-![KakaoTalk_20211125_085357264_11](https://user-images.githubusercontent.com/89543695/143537198-47a7aea8-1644-4c12-8d20-e5c17827ce90.gif)
-
-![KakaoTalk_20211125_085357264_08](https://user-images.githubusercontent.com/89543695/143537094-d46206f6-5fa4-4a55-bf0c-6d57b7c27bf4.gif)
-
-![KakaoTalk_20211125_085357264_09](https://user-images.githubusercontent.com/89543695/143537103-445acca8-48d9-40e1-8b95-38dd58b03bb6.gif)
-
-![KakaoTalk_20211125_085357264_10](https://user-images.githubusercontent.com/89543695/143537189-fdf2cdc6-b9b5-4f18-ae97-d3bf78f90fc1.gif)
-
-
+# ER Diagram
+##### * 사진을 클릭하면 크게 자세히 볼 수 있어요!!
+<img src="https://user-images.githubusercontent.com/89543695/143770934-eeb6646d-d561-4a11-90d4-2e785595388f.png" width="470px" hight="610px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
