@@ -21,7 +21,7 @@ try {
 /* 게시글 READ */
 router.get('/:id', async (req, res, next) => {
   try {
-    const texts = await CommunityPost.findOne({
+    const text = await CommunityPost.findOne({
       include: {
         model: User,
         attribute: ['id', 'nick'],
@@ -29,12 +29,12 @@ router.get('/:id', async (req, res, next) => {
       where: { id: `${req.params.id}` },
     })
     await CommunityPost.update(
-      { views: texts.views + 1 },
+      { views: text.views + 1 },
       { where: { id: `${req.params.id}` } }
     );
     res.render('board/view-community', {
       title: 'mountain 커뮤니티',
-      communityTwits: texts,
+      communityTwit: text,
     });
   } catch (error) {
     console.error(error);

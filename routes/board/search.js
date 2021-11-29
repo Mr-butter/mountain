@@ -3,14 +3,14 @@ const url = require('url');
 const { CommunityPost, Sequelize, User } = require('../../models');
 const router = express.Router();
 
-const Op = Sequelize.Op;    // LIKE
+const { Op } = Sequelize;    // LIKE
 
 /* 검색 기능 */
 router.get('/', async (req, res, next) => {
   try {
-    let queryData = url.parse(req.url, true).query;
-    let search = queryData.search;
-    let select = queryData.select;
+    let { query } = url.parse(req.url, true);
+    let { search } = query;
+    let { select } = query;
 
     /* 제목/내용 검색 */
     const titleContents = await CommunityPost.findAll({

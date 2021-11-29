@@ -46,7 +46,6 @@ router.post("/", isLoggedIn, upload.none(), async (req, res, next) => {
     await CommunityPost.create({
       title: req.body.title,
       content: req.body.content,
-      views: 0,
       img: req.body.url,
       UserId: req.user.id,
     });

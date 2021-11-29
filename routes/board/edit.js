@@ -13,17 +13,16 @@ router.use((req, res, next) => {
 /* 게시글 수정 전 READ */
 router.get('/:id', async (req, res, next) => {
   try {
-    const editTexts = await CommunityPost.findOne({
+    const editText = await CommunityPost.findOne({
       include: {
         model: User,
         attribute: ['id', 'nick'],
       },
       where: { id: `${req.params.id}` },
     });
-    console.log(editTexts);
     res.render('board/edit-community', {
       title: 'mountain 커뮤니티 수정하기',
-      communityTwits: editTexts,
+      communityTwit: editText,
     });
   } catch (error) {
     console.error(error);
@@ -66,7 +65,7 @@ router.post('/:id', async (req, res, next) => {
       },
       { where: { id: `${req.params.id}` } }
     );
-    res.redirect("/community/page?offset=0&limit=5");
+    res.redirect(`/view/${req.params.id}`);
   } catch (error) {
     console.error(error);
     next(error);

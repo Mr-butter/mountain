@@ -4,26 +4,28 @@
 <section class="community-edit-box">
   <div class="community-eit-title">
     <h1>게시판 수정</h1>
-    <a href="/view/{{communityTwits.id}}">수정취소</a>
+    <a href="/view/{{communityTwit.id}}">수정취소</a>
   </div>
 
   <body>
     <form class="community" method="POST" action="">
       <fieldset class="community-upload">
         <div class="community-upload-title">
-          <textarea class="upload-title-text upload-text" name="title" id="title" cols="80" rows="1" required>
-          {{communityTwits.title}}</textarea>
+          <textarea class="upload-title-text upload-text" 
+          name="title" id="title" cols="80" 
+          rows="1" required>{{communityTwit.title}}</textarea>
         </div>
         <div class="community-upload-content upload-text">
           <div class="img-preview">
-            {% if communityTwits.img %}
-            <img id="img-preview" src="{{communityTwits.img}}" width="300px" alt="미리보기" />
+            {% if communityTwit.img %}
+            <img id="img-preview" src="{{communityTwit.img}}" width="300px" alt="미리보기" />
             {% endif %}
             <input id="img-url" type="hidden" name="url" />
           </div>
           <div>
-            <textarea class="community-upload-text upload-text" name="content" id="content" cols="80" rows="8" required>
-            {{communityTwits.content}}</textarea>
+            <textarea class="community-upload-text upload-text" 
+              name="content" id="content" cols="80" 
+              rows="8" required>{{communityTwit.content}}</textarea>
           </div>
         </div>
       </fieldset>

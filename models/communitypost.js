@@ -20,6 +20,7 @@ module.exports = class CommunityPost extends Sequelize.Model {
         views: {
           type: Sequelize.INTEGER,
           allowNull: false,
+          defaultValue: 0,
         },
         createdAt: {
           type: Sequelize.DATEONLY,

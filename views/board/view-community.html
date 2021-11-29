@@ -10,9 +10,9 @@
         <h1>커뮤니티</h1>
         <div class="community-a-click">
         <a href="/community/page?offset=0&limit=5">목록으로</a>
-        {% if communityTwits.id === user.id %}
-        <a href="/edit/{{communityTwits.id}}">수정하기</a>
-        <a href="/view/{{communityTwits.id}}/delete">삭제하기</a>
+        {% if communityTwit.User.id === user.id %}
+        <a href="/edit/{{communityTwit.id}}">수정하기</a>
+        <a href="/view/{{communityTwit.id}}/delete">삭제하기</a>
         {% endif %}
        </div>
     </div>
@@ -22,24 +22,24 @@
             <!-- <i class="fas fa-thumbs-up"></i>
             <i class="far fa-thumbs-up"></i> -->
           <div class="communitytwit-contents-title">
-            <p class="contents-id">{{communityTwits.id}}</p> <!-- 확인 차 넣은 수 -->
-            <p>{{communityTwits.title}}</p>
+            <p class="contents-id">{{communityTwit.id}}</p> <!-- 확인 차 넣은 수 -->
+            <p>{{communityTwit.title}}</p>
             <p>
-            <div class="board-nick">{{communityTwits.User.nick}}</div>
+            <div class="board-nick">{{communityTwit.User.nick}}</div>
             </p>
             <p>
-            <div class="board-createdAt">{{communityTwits.createdAt}}</div>
+            <div class="board-createdAt">{{communityTwit.createdAt}}</div>
             </p>
-            <p>조회수 : {{communityTwits.views}}</p>
+            <p>조회수 : {{communityTwit.views}}</p>
           </div>
         </div>
         <div id="board-content-img">
             <p>
-            <div class="board-content">{{communityTwits.content}}</div>
+            <div class="board-content">{{communityTwit.content}}</div>
             </p>
-            {% if communityTwits.img != false %}
+            {% if communityTwit.img != false %}
             <!-- 사진이 없으면 보여주지 않는다. -->
-            <img class="community-img" src="{{ communityTwits.img }}">
+            <img class="community-img" src="{{ communityTwit.img }}">
             {% endif %}
         </div>
     </div>
